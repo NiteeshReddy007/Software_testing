@@ -1,0 +1,24 @@
+package org.example;
+
+public class binarisearch {
+    public static int search(int []nums, int target) {
+
+        // Write your code here.
+        int s=0;
+        int e=nums.length-1;
+        int mid=(e-s)/2;
+        while(s<=e){
+            if(nums[mid]==target){
+                return mid;
+            }
+            else if(target>nums[mid]){
+                s=mid+1;
+            }
+            else{
+                e=mid-1;
+            }
+            mid=s+(e-s)/2;
+        }
+        return -1;
+    }
+}
